@@ -1,0 +1,25 @@
+package com.just;
+
+public class Experiment extends ExpPractice{
+
+	public Experiment()
+	{
+	
+		super();
+	}
+
+	public static void main(String args[])
+	{
+		Experiment ex=new Experiment();
+		ex.execute();
+		ex.working();
+
+		System.out.println(ex.i);
+		System.out.println(ex.kk);
+	}
+	public void execute()
+	{
+		System.out.println("hello");
+	}
+	
+}

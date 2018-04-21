@@ -1,0 +1,18 @@
+package com.exception;
+
+public class TestMyException {
+
+	public void check(int age) throws MyException
+	{
+		if(age<18)
+			throw new MyException("age cannot be less than 18");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		TestMyException t=new TestMyException();
+		t.check(19);
+	}
+
+}

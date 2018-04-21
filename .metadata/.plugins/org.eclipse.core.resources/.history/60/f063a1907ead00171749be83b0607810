@@ -1,0 +1,19 @@
+
+public class Thread2 {
+	public void run(){
+		//System.out.println("inside run");
+		
+		try{
+			for(int i=100;i<=5;i++)
+			{
+				System.out.println(i);
+			
+			Thread.sleep(1000);
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("excep= "+e.getMessage());
+		}
+	}
+}

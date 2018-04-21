@@ -1,0 +1,97 @@
+package com.just;
+
+import org.pojomatic.Pojomatic;
+
+import org.pojomatic.annotations.AutoProperty;
+
+
+
+@AutoProperty
+
+public class Employee {
+
+   public String name;
+
+   public int age;
+
+   public int salary;
+
+
+
+   public String getName() {
+
+      return name;
+
+   }
+
+
+
+   public void setName(String name) {
+
+      this.name = name;
+
+   }
+
+
+
+   public int getAge() {
+
+      return age;
+
+   }
+
+
+
+   public void setAge(int age) {
+
+      this.age = age;
+
+   }
+
+
+
+   public int getSalary() {
+
+      return salary;
+
+   }
+
+
+
+   public void setSalary(int salary) {
+
+      this.salary = salary;
+
+   }
+
+
+
+   @Override
+
+   public int hashCode() {
+
+      return Pojomatic.hashCode(this);
+
+   }
+
+
+
+   @Override
+
+   public boolean equals(Object other) {
+
+      return Pojomatic.equals(this, other);
+
+   }
+
+
+
+   @Override
+
+   public String toString() {
+
+      return Pojomatic.toString(this);
+
+   }
+
+}

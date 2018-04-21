@@ -1,0 +1,19 @@
+
+public class Thread2 implements Runnable{
+	public void run(){
+		//System.out.println("inside run");
+		int n=100;
+		try{
+			for(int i=1;i<=5;i++)
+			{
+				System.out.println(n*i);
+			
+			Thread.sleep(1000);
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("excep= "+e.getMessage());
+		}
+	}
+}

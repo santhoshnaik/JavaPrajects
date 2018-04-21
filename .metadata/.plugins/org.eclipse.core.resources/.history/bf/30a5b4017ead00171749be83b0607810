@@ -1,0 +1,14 @@
+
+public class MyThread1 extends Thread {
+
+	public void run(){
+		//System.out.println("inside run");
+		try{
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println("excep= "+e.getMessage());
+		}
+	}
+}

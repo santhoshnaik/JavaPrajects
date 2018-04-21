@@ -1,0 +1,6 @@
+package com.just;
+
+public class Experiment {
+
+	int j=exp.i;
+}

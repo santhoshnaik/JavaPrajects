@@ -1,0 +1,16 @@
+package com.just;
+
+public class Experiment extends ExpPractice{
+
+	ExpPractice exp;
+
+	public static void main(String args[])
+	{
+		Experiment ex=new Experiment();	
+	}
+	public void execute()
+	{
+		System.out.println("hello");
+	}
+	
+}

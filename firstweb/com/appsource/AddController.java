@@ -1,0 +1,10 @@
+package com.appsource;
+
+public class AddController {
+
+	@controller
+	public String add(){
+	System.out.println("hello there");
+	return "result.jsp";
+	}
+}

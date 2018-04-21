@@ -1,0 +1,25 @@
+package com.appsource;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class ModelService {
+	
+	public boolean service()
+	{
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/useracount","root","123456");
+			PreparedStatement ps=con.prepareStatement("select*from user where uname=? pass=?");
+			
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+		return ;
+	}
+
+}

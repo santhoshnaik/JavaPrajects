@@ -1,0 +1,16 @@
+package com.app;
+
+public class TestClass {
+
+	public void add()
+	{
+		System.out.println("addding");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+	}
+
+}

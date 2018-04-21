@@ -1,0 +1,55 @@
+package com.justhire.driver;
+ 
+import java.util.ArrayList;
+
+import com.justhire.driver.R;
+import com.justhire.mobile.JustHireActivity;
+
+import android.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
+
+public class TodayFragment extends Fragment {
+	
+	public TodayFragment(){}
+
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) 
+	{		
+        View rootView = inflater.inflate(R.layout.fragment_today, container, false);
+        ArrayList<ListviewContactItem> listContact = GetlistContact();
+        ListView lv = (ListView)rootView.findViewById(R.id.todayListView);
+        lv.setAdapter(new ListviewContactAdapter(getActivity(), listContact));
+
+        return rootView;
+    }
+	private ArrayList<ListviewContactItem> GetlistContact()
+	{
+	    ArrayList<ListviewContactItem> contactlist = new ArrayList<ListviewContactItem>();
+
+	    ListviewContactItem contact = new ListviewContactItem();
+
+	    contact.SetName("Santhosh Naik");
+	    contact.SetPhone("7259875193");
+	    contact.setAddress("#67,Murali nalaya,!st fr,2nd main 3rd cross vijinapura,SP naidu layout,L/M near State bank of mysore");
+	    contactlist.add(contact);
+
+	    contact = new ListviewContactItem();
+	    contact.SetName("Prathap");
+	    contact.SetPhone("8945652156");
+	    contact.setAddress("#109,6th cross, K R layout,jp nagar 6th phase l/m inchara hotel");
+	    contactlist.add(contact);
+        
+	    return contactlist; 
+   }  
+	
+public void  callService()
+	{ 
+	   JustHireActivity activity = (JustHireActivity)this.getActivity(); 	
+	  activity.callService(this, "");
+	}
+	
+}

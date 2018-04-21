@@ -1,0 +1,13 @@
+package com.just;
+
+public class ExpPractice extends Exception{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		String s1="santhosh";
+		String s2="santhosh";
+	}
+
+}

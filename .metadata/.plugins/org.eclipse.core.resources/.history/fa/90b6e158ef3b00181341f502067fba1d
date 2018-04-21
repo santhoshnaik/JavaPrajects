@@ -1,0 +1,12 @@
+package com.just;
+
+public class Experiment {
+
+	ExpPractice exp;
+	int j=exp.i;
+	
+	public void execute()
+	{
+		System.out.println(j);
+	}
+}

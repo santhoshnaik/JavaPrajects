@@ -1,0 +1,52 @@
+package com.exception;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+
+public class Connection {
+
+	
+	public void connKeyboard() throws IOException
+	{
+		int ch;
+		FileReader fr=new FileReader("C:/Users/SANTHOSH NAIK/Desktop/JAVA path.txt");
+		
+		while((ch=fr.read())!=-1)
+		{
+			
+			System.out.print((char)(ch));
+		}
+		
+		}
+	public void writeFile()
+	{
+		String str="hello java devop";
+		try {
+			FileWriter fw=new FileWriter("C:/Users/SANTHOSH NAIK/Desktop/JAVA path.txt");
+			
+			for(int i=0;i<str.length();i++)
+			{
+				System.out.print(str.charAt(i));
+				fw.write(str.charAt(i));
+			}
+			fw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void main(String arg[]) {
+		try{
+			Connection con=new Connection();
+			con.writeFile();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+}

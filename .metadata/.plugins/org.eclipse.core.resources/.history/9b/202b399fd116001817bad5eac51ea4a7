@@ -1,0 +1,14 @@
+package com.com;
+class A{
+	
+	static{
+		System.out.println("bcklehfobw");
+	}
+	public class B{
+		
+	}
+	public static void main(String arg[])
+	{
+		System.out.println("kfefefnbwe");
+	}
+}

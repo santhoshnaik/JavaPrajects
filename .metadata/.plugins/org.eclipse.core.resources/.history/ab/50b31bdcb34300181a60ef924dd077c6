@@ -1,0 +1,23 @@
+package com.app;
+
+public interface Eatable {
+	
+	public void eat();
+}
+	 class TestAnnoy{
+		 
+		 public void static main(String args[]){
+			 Eatable e=new Eatable()
+				{
+					public void eat(){
+						System.out.println("eating");
+					}
+				};
+					
+				e.eat();
+		 }
+		
+		
+	}
+
+

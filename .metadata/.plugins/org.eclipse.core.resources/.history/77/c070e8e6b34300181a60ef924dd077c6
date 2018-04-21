@@ -1,0 +1,13 @@
+package com.app;
+
+class TestAnnoy{
+	
+	Eatable e=new Eatable()
+	{
+		public void eat(){
+			System.out.println("eating");
+		}
+	};
+		
+	e.eat();
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JustHireDriver</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="dayButton">To Day</string>
+     <string name="weekButton">Week</string>
+      <string name="monthButton">Month</string>
+       <string name="waitListButton">Wait List</string>
+
+</resources>

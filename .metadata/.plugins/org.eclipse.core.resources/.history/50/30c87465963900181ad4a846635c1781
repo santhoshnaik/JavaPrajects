@@ -1,0 +1,27 @@
+package com.just;
+
+public   class ExpPractice {
+
+	//public abstract void dance();
+	public int hey(){
+		System.out.println("dan");
+		int i=5;
+		return i;
+	}
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		
+		ExpPractice exp=new ExpPractice();
+		String str1 = "String1";
+		String str2 = "String2";
+		str1=str1.concat("String3");
+		
+		System.out.print(str1);
+		System.out.print(str2);
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.com;
+class A{
+	
+	static{
+		System.out.println("bcklehfobw");
+	}
+	
+	public static void main(Stiring [])
+	{
+		System.out.println("kfefefnbwe");
+	}
+}

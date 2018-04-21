@@ -1,0 +1,12 @@
+
+package com.appsouce
+public class AddController {
+public String add()
+{
+	System.out.println("hello i am here");
+	
+	return " ";
+}
+	
+	
+}

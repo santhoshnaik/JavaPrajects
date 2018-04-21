@@ -1,0 +1,22 @@
+package com.just;
+
+public class ExpPractice extends Exception{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		String s1="santhosh";
+		String s2="santhosh";
+		String s3=new String("santhosh n");
+		if(s1.equals(s2))
+		System.out.println("equal");
+		else
+			System.out.println("not equal");
+	
+		System.out.println(s1.hashCode());
+		System.out.println(s2.hashCode());
+		System.out.println(s3.hashCode());
+	}
+
+}

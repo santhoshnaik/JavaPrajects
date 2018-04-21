@@ -1,0 +1,20 @@
+package com.just;
+
+public  class ExpPractice {
+String name;
+	public ExpPractice(String name)
+	{
+		this.name=name;
+	}
+	 protected void finalize() throws Throwable{
+		 System.out.println("garbage collected");
+	 }
+	 
+	 public static void  main(String args[]){
+		 ExpPractice exp1=new ExpPractice("");
+		 ExpPractice exp2=new ExpPractice("helg");
+		 exp1=null;
+		 
+		 
+	 }
+}

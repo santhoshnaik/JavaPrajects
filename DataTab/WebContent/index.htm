@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery DataTable </title>
+
+<link href="css/jquery.dataTable.css" rel="stylesheet" />
+<link href="css/stylepage.css" rel="stylesheet" />
+<link href="css/demo_page.css" rel="stylesheet" />
+<link href="css/demo_table_jui.css" rel="stylesheet" />
+<link href="css/jquery-ui.css" rel="stylesheet" />
+
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+
+<script>
+$(document).ready(function() {
+	$(".jqueryDataTable").dataTable({
+		"sAjaxSource" : "./DataTableServlet",//configer servlet to jquery ajax 
+		"bProcessing" : true,
+		//"sPaginationType" : "full_numbers",
+		//"bJQueryUI" : true,
+		"scrollY":'200',
+		"scrollX":true,
+		  //Json formatted data to main table                
+		"aoColumns" : [
+            {"mData":"SlNo"},
+            { "mData": "company" },
+            { "mData": "country" },
+            { "mData": "year" },
+            { "mData": "revenue" }            
+        ]
+    } ); 
+} );
+</script>
+</head>
+
+<body>
+<h3>Showing a jQuery DataTable </h3><hr color="green">
+
+	<table class="display jqueryDataTable">
+	<thead>
+	<tr>
+	    <th>SlNo</th>
+		<th>Company</th>
+		<th>Country</th>
+		<th>Estd.Year</th>
+		<th>Revenue</th>
+	</tr>
+	</thead>
+	
+	</table>
+
+
+</body>
+</html>

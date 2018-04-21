@@ -1,0 +1,10 @@
+package com.appsource;
+
+public class ModelService {
+	
+	public String service()
+	{
+		
+	}
+
+}

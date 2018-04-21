@@ -1,0 +1,9 @@
+package com.just;
+
+public  class ExpPractice {
+
+	
+	 public static void  main(String args[]){
+		
+	 }
+}

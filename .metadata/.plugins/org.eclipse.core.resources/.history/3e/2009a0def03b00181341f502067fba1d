@@ -1,0 +1,13 @@
+package com.just;
+
+public class Experiment extends ExpPractice{
+
+	ExpPractice exp;
+
+	
+	public void execute()
+	{
+		System.out.println("hello");
+	}
+	expPractice.working();
+}

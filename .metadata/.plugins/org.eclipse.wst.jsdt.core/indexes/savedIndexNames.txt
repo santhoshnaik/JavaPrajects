@@ -1,0 +1,19 @@
+INDEX VERSION 1.3+E:\Softwares\Android\sdkworkspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1202377861.index
+438510818.index
+4007375913.index
+3098148731.index
+3276631730.index
+3060872650.index
+1559421236.index
+1825613931.index
+1055762360.index
+3773839367.index
+1585479680.index
+1909832682.index
+1461065976.index
+21440185.index
+2416523504.index
+2357782171.index
+1953340543.index
+2649889230.index

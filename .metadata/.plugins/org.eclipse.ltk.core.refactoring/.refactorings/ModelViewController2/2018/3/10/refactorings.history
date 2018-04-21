@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ModelViewController2/WebContent/homepagehtml.html&apos; to &apos;homepage.html&apos;" description="Rename resource &apos;homepagehtml.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/homepagehtml.html" name="homepage.html" stamp="1520581223011" updateReferences="true"/>
+</session>

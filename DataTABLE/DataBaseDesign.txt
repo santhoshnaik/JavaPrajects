@@ -1,0 +1,6 @@
+
+//create a table with name JqueryTable 
+//create table JqueryTable(SlNo varchar(10),company varchar(50),country varchar(20),year DATE,revenue varchar(25))
+
+//inserting value into respected field
+insert into JqueryTable(SlNo,company,country,year,revenue)values('Id001','IBM','USA','1995-12-05','58 bn$')

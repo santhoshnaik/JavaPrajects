@@ -1,0 +1,17 @@
+package com.just;
+
+public  abstract class ExpPractice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		String str1 = "String1";
+		String str2 = "String2";
+		str1=str1.concat("String3");
+		
+		System.out.print(str1);
+		System.out.print(str2);
+	}
+
+}

@@ -1,0 +1,11 @@
+<html>
+<body>
+<h2>Hello World!</h2>
+<form action="add">
+<input type="text" name="v1">
+<input type="text" name="v2">
+<input type="submit" value="click">
+</form>
+
+</body>
+</html>

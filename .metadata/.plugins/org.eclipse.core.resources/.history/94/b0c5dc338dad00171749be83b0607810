@@ -1,0 +1,20 @@
+
+public class Table {
+
+	public synchronized  void printTable(int n)
+	{
+		try{
+			for(int i=1;i<=4;i++)
+			{
+				System.out.println(n*i);
+			
+			//Thread.sleep(1000);
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("excep= "+e.getMessage());
+		}
+	}
+
+}

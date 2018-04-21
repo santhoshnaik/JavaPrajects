@@ -1,0 +1,202 @@
+package com.justhire.driver;
+ 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+
+import com.justhire.common.RestWSHandler;
+import com.justhire.driver.R;
+import com.justhire.httpclient.HttpsClientUtils;
+import com.justhire.httpclient.RESTWSTask;
+
+import android.app.Activity;
+import android.app.Fragment;
+import android.content.Context;
+import android.os.Bundle;
+import android.os.Message;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class TodayFragment extends Fragment {
+	
+	ArrayList<HashMap<String, String>> mylist;
+
+	public static String ID = "id";
+	public static	String DATE = "date";
+	public static String STATUS = "status";
+	public static String NAME = "name";
+	
+	
+	ListView listview = null;
+	public TodayFragment(){}
+	//TodayFragment todayFrag=new TodayFragment();
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) 
+	{	
+		View rootView = inflater.inflate(R.layout.fragment_today,container, false); 
+		
+		    	
+    	listview = (ListView)rootView.findViewById(R.id.todayListView);
+    	
+    	 
+   	
+    	     	 
+        return rootView;				      
+    }
+	 
+
+	public void handleResponse(String response) {
+
+		String ID = "id";
+		String DATE = "date";
+		String STATUS = "status";
+		String NAME = "name";
+		//SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy", Locale.ENGLISH);
+
+		//ListView list = (ListView) findViewById(R.id.book_statuslist);
+
+		ArrayList<HashMap<String, String>> mylist = new ArrayList<HashMap<String, String>>();
+
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put(ID, "Book Id");
+		map.put(DATE, "Date of Booking");
+		map.put(STATUS, "Status");
+		mylist.add(map);
+
+		try {
+			JSONArray jso = new JSONArray(response);
+			for (int i = 0; i < jso.length(); i++) {
+				JSONObject jo = jso.getJSONObject(i);
+				map = new HashMap<String, String>();
+				map.put(ID, jo.getString("id"));
+				try {
+
+					map.put(DATE,jo.getString(DATE));
+							//sdf.format(new Date((jo.getLong("bookFromTs")))));
+				} catch (Exception e) {
+
+					e.printStackTrace();
+				}
+				map.put(STATUS, jo.getString("status"));
+				System.out.println("response - booking data = " + map);
+				mylist.add(map);
+
+			}
+                
+
+		} catch (JSONException e) {
+
+			e.printStackTrace();
+		}
+
+	}
+
+// This method is called after the parent Activity's onCreate() method has completed.
+    // Accessing the view hierarchy of the parent activity must be done in the onActivityCreated.
+    // At this point, it is safe to search for activity View objects by their ID, for example.
+  //  @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+ 	Activity activity = getActivity();
+    JSONObject bookJSON = new JSONObject();
+    String un ="santhosh";                              //this.getIntent().getExtras().getString("un");
+    String pd = "santhoshJH**01";                      //this.getIntent().getExtras().getString("pd");
+    String id = "318";                                //this.getIntent().getExtras().getString("cid");
+    try {
+        bookJSON.put("uName", un);
+        bookJSON.put("passTkn", pd);
+        bookJSON.put("customerId", id);
+
+    } catch (JSONException e) {
+        e.printStackTrace();
+    }
+
+    RESTWSTask wst = new RESTWSTask(HttpsClientUtils.POST_TASK,asyncHandler,activity,"Getting booking status details...");
+    wst.addJSONObject(bookJSON);
+    // the passed String is the URL we will POST to
+    wst.execute(new String[] { "https://jh-justhireapp.rhcloud.com/hireme/service/booking/mobile/bookingstatus" });
+    }
+    
+    
+    RestWSHandler asyncHandler = new RestWSHandler()
+    {
+       
+		@Override
+		public void resultSuccess(Message msg) {
+			// TODO Auto-generated method stub
+			String response = (String) msg.obj;
+			String ID = "id";
+			String DATE = "date";
+			String STATUS = "status";
+			//SimpleDateFormat sdf = new SimpleDateFormat("DATEFORMAT", Locale.ENGLISH);
+
+			//ListView list = (ListView) findViewById(R.id.book_statuslist);
+
+			ArrayList<HashMap<String, String>> mylist = new ArrayList<HashMap<String, String>>();
+
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put(ID, "Book Id");
+			map.put(DATE, "Date of Booking");
+			map.put(STATUS, "Status");
+			mylist.add(map);
+
+			ArrayList<ListviewContactItem> contactlist = new ArrayList<ListviewContactItem>();
+			try {
+				JSONArray jso = new JSONArray(response);
+				for (int i = 0; i < jso.length(); i++) {
+					JSONObject jo = jso.getJSONObject(i);
+					map = new HashMap<String, String>();
+					
+
+				    ListviewContactItem contact = new ListviewContactItem();
+				    contact.SetName(jo.getString("id"));
+					map.put(ID, jo.getString("id"));
+					try {
+						//map.put(DATE,"10/10/2015");
+						map.put(DATE,jo.getString(DATE));
+						contact.SetPhone(jo.getString(DATE));
+								//sdf.format(new Date((jo.getLong("bookFromTs")))));
+					} catch (Exception e) {
+
+						e.printStackTrace();
+					}
+					map.put(STATUS, jo.getString("status"));
+														 
+							contact.setAddress(jo.getString("status"));						
+							contactlist.add(contact);				
+							listview.setAdapter(new ListviewContactAdapter(getActivity(),contactlist));
+			    						
+			}
+
+				} 
+			catch (JSONException e) 
+			{
+
+				e.printStackTrace();
+			}
+
+			
+		}
+
+		@Override
+		public void resultFailed(Message msg) {
+			// TODO Auto-generated method stub
+			
+		}
+    };
+
+	 
+	}
+	
+	

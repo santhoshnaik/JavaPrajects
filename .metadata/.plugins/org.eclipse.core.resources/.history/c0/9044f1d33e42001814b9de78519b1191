@@ -1,0 +1,47 @@
+package com.appsource;
+
+public class LoginBean {
+
+	String uname;
+	String pwd;
+    String msg="";
+	public String getUname() {
+		return uname;
+	}
+	public void setUname(String uname) {
+		this.uname = uname;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		LoginBean other = (LoginBean) obj;
+		if (uname == null) {
+			if (other.uname != null)
+				return false;
+		} else if (!uname.equals(other.uname))
+			return false;
+		if (pwd == null) {
+			if (other.pwd != null)
+				return false;
+		} else if (!pwd.equals(other.pwd))
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "LogBean [uname=" + uname + ", pwd=" + pwd + "]";
+	}
+	
+
+}

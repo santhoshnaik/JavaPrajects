@@ -1,0 +1,13 @@
+
+public class Thread2 extends Thread{
+	Table t;
+	public Thread2(Table t)
+	{
+		this.t=t;
+	}
+	public void run(){
+		//System.out.println("inside run");
+		Thread,sleep(10000);
+		t.printTable(200);
+	}
+}

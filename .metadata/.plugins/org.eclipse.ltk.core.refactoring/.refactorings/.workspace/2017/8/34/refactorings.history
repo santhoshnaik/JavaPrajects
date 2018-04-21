@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;StrutsLogInLogout&apos; to &apos;StrutsLoginLogout&apos;" description="Rename resource &apos;StrutsLogInLogout&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/StrutsLogInLogout" name="StrutsLoginLogout" stamp="1503474578348" updateReferences="true"/>
+</session>

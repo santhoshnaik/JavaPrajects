@@ -1,0 +1,6 @@
+package com.app;
+
+public interface Showable {
+public void show();
+
+}

@@ -1,0 +1,28 @@
+package com.just;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.TreeSet;
+
+public  class ExpPractice {
+
+	
+	 public static void  main(String args[]){
+		ArrayList<Integer> list=new ArrayList<Integer>();
+		list.add(2);
+		list.add(3);list.add(4);list.add(5);list.add(6);
+		System.out.println(list);
+		LinkedList<Integer> ll=new LinkedList<Integer>();
+		
+		ll.add(7);ll.add(8);ll.add(9);ll.add(10);ll.add(11);
+		System.out.println(ll);
+		HashSet ss=new HashSet();
+		ss.add(2);ss.add(3);ss.add("android");ss.add("java");ss.add("xmlat");
+		System.out.println(ss);
+		
+		TreeSet ts=new TreeSet();
+		ts.add("android");ts.add("java");ts.add("xmlation");
+		System.out.println(ts);
+	 }
+}

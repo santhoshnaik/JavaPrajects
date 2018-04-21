@@ -1,0 +1,16 @@
+package com.just;
+
+public  class ExpPractice {
+
+	final int kk=100;
+	public int i=10;
+	
+	final public void working()
+	{
+		System.out.println("Exp working");
+	}
+
+	//System.out.println("");
+ 
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.justhire.driver.SimpleAdapter&apos; to &apos;JHSimpleAdapter&apos;&#x0D;&#x0A;- Original project: &apos;JusthireDrivers&apos;&#x0D;&#x0A;- Original element: &apos;com.justhire.driver.SimpleAdapter&apos;&#x0D;&#x0A;- Renamed element: &apos;com.justhire.driver.JHSimpleAdapter&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SimpleAdapter&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.justhire.driver{SimpleAdapter.java[SimpleAdapter" matchStrategy="1" name="JHSimpleAdapter" qualified="false" references="true" similarDeclarations="false" stamp="1448802310518" textual="false" version="1.0"/>
+</session>

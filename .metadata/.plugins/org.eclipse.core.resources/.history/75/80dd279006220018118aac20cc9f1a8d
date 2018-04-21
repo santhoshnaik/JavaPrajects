@@ -1,0 +1,24 @@
+package com.just;
+
+public class TestMultir {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String s="jav ajaVA";
+		
+		String ss=s.toLowerCase();
+		int count=0;
+		char[] arr=ss.toCharArray();
+		for(int i=0;i<arr.length;i++)
+		{
+			if(!(Character.isDigit(arr[i])))
+			{
+				if(!(arr[i]==' '||arr[i]=='a'||arr[i]=='e'||arr[i]=='o'||arr[i]=='u'||arr[i]=='i'))
+					count++;
+			}
+		}
+		System.out.println(count);
+	}
+
+}

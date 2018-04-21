@@ -1,0 +1,15 @@
+
+public class MyThread1 extends Thread {
+
+	public void run(){
+		//System.out.println("inside run");
+		try{
+			
+			Thread.sleep(1000);
+		}
+		catch(Exception e)
+		{
+			System.out.println("excep= "+e.getMessage());
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package com.exception;
+
+import java.io.FileReader;
+import java.io.OutputStreamWriter;
+
+public class Connection {
+
+	
+	public void connKeyboard()
+	{
+		FileReader f=new OutputStreamWriter("file.txt");
+		}
+}

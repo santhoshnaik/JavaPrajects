@@ -1,0 +1,19 @@
+package com.just;
+
+public class ExpPractice extends Exception{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		String s1="santhosh";
+		String s2="santhosh";
+		String s3=new String("santhosh");
+		if(s1.equals(s3))
+		System.out.println("equal");
+		else
+			System.out.println("not equal");
+		
+	}
+
+}
