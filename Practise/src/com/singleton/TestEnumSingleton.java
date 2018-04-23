@@ -15,7 +15,11 @@ public class TestEnumSingleton {
 		home2.color="Yellow";
 		System.out.println(home2.hashCode());
 		home.houseColor();
-				
+		
+		House home1=House.INSTANCE;
+		home.color="Red";
+		System.out.println(home1.hashCode());
+		home.houseColor();
 	}
 
 }

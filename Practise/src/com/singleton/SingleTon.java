@@ -6,13 +6,28 @@ public class SingleTon {
 		// TODO Auto-generated method stub
 
 		
-		Santhosh santu=Santhosh.getInstance();
+		Thread t1=new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				Santhosh santu=Santhosh.getInstance();
+				System.out.println(santu.hashCode());
+				
+			}
+		});
+		//second thread
+Thread t2=new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				Santhosh santu2=Santhosh.getInstance();
+				System.out.println(santu2.hashCode());
+				
+			}
+		});
 		
-		System.out.println(santu.hashCode());
-		Santhosh santu1=Santhosh.getInstance();
-		System.out.println(santu1.hashCode());
-		/*Santhosh santu2=new Santhosh();
-		System.out.println(santu2.hashCode());*/
+		t1.start();
+		t2.start();
 	}
 
 }
